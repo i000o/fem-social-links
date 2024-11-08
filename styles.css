@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap');
 
 /* Box sizing rules */
 *,
@@ -6,9 +6,6 @@
 *::after {
   box-sizing: border-box;
 }
-
-
-/* Global styles */ 
 
 a:link {
     color: inherit; /* no blue default link color */ 
@@ -19,95 +16,132 @@ a:visited {
     color: inherit; /* no purple visited links */ 
 }
 
-ul { 
-    text-decoration: none;
-    list-style-type: none;
-    padding: 0;
-    margin: /* more gap between li */ 
-}
-
-
 body {
+    background-color: #F4D04E;
+    font-family: 'figtree', sans-serif;
     display: flex;
     flex-direction: column;
-    background-color: hsl(0, 0%, 8%);
-    font-family: 'Inter', sans-serif;
-    font-weight: 400, 600, 700;
-    color: hsl(0, 0%, 100%);
     justify-content: center; 
     align-items: center;
-    text-align: center;
+    text-align: left;
     min-height: 100svh;
-    gap: 2rem; 
-    font-size: 1.4vw;
+    gap: 2rem; /* what is this doing? */ 
+    font-size: 1.4vw; /* using vw instead of rem as a way to responsively have text adjust without m. queries */ 
 }
 
 section {
-    background-color: hsl(0, 0%, 12%);
+    height: auto; 
+    max-width: 22rem; 
+    background-color: #FFFFFF;
+    border: solid;
+    border-width: 1px;
     border-radius: 16px;
-    min-width: 22rem;
-    padding: 10px;
+    box-shadow: 10px 10px #000000;
+    padding: 16px;
 }
 
-section div { /* flex container 2 */ 
-    display: flex;
+.illustration {
+    display: block; 
+    height: auto; 
+    max-width: 100%;
+    border-radius: 16px;
+}
+
+p {
+    color: rgb(107 107 107);
+    padding: 0px;
+    margin: 20px 0 10px 0;
+    line-height: 150%;
+}
+
+.author-profile {
+    display: flex; 
     flex-direction: row;
-    justify-content: center;
-    padding: 0;
+    align-items: center;
 }
 
-section div img { /* flex-item */ 
-    width: 20%;
-    border-style: hidden;
-    border-radius: 40px;
-    margin: 0.5em;
-}
-
-h1 {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-bottom: 0; 
+.profile {
+    width: 10%;
 }
 
 h2 {
-    font-size: 0.75rem;
-    color: hsl(75, 94%, 57%);
-    margin: 5px 0 10px 0; 
-    padding: 5px;
-}
-
-h3 {
-    font-size: 0.8rem;
-    font-weight: 300;
-    margin: 20px 10px 10px 10px;
-}
-
-section ul {
     margin: 0;
 }
 
-section.links a {
-    display: flex; 
-    flex-direction: row; 
-    justify-content: center;
-    font-weight: 600;
-    background-color: hsl(0, 0%, 20%);
-    margin: 13px; 
-    padding: 3px;
-    border-radius: 10px;
-    font-size: 0.77rem;
+h2:hover {
+    color: #F4D04E;
+    cursor: pointer;
 }
 
-section.links a:hover {
-    color: #000000;
-    background-color: hsl(75, 94%, 57%);
+.title-focus:focus-visible { 
+    display: flex;
+    flex-direction: row;
+    outline-style: solid;
+    outline-color:rgb(24, 24, 148);
+    border-radius: inherit;
+    outline-offset: 5px;
+}
+
+h3 {
+    font-size: 0.9rem;
+    padding: 10px 5px 10px 5px;
+    margin: 10px 10px;
+    font-size: 1.4vw;
+}
+
+h3:hover {
+    color: #F4D04E;
+    cursor: pointer;
+}
+
+.author-focus:focus-visible {
+    outline-style: solid;
+    outline-offset: -13px; /* the only way I could find to tighten the outline to the content where margin and padding 0 had no impact */ 
+    outline-color: rgb(24, 24, 148);
+    border-radius: 16px;
+}
+
+h4 {
+    font-weight: normal;
+    margin: 10px 0 10px 0;
+    font-size: 1.4vw;
+    margin-bottom: 20px;
+}
+
+h5 {
+    display: inline-block;
+    background-color: #F4D04E;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 20px 0 10px 0;
+}
+
+h5:hover {
     cursor: pointer; 
-    /* can I make the pointer black without JS? */ 
+    background-color: #000000;
+    color: #F4D04E;
+}
+
+section a:focus-visible { /* why not :focus ? */ 
+    outline-style: solid; 
+    outline-color: rgb(24, 24, 148);
+}
+
+.learning-focus:focus-visible {
+    border-radius: inherit;
 }
 
 footer {
     display: flex; 
-    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    font-size: 1em;
+    margin: 20px;
+}
+
+footer a:focus-visible {
+    outline-style: solid;
+    outline-color: rgb(24, 24, 148);
+    border-radius: 16px;
+    padding: 5px;
+    margin: 5px;
 }
