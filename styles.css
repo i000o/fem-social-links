@@ -23,7 +23,6 @@ ul {
     text-decoration: none;
     list-style-type: none;
     padding: 0;
-    margin: /* more gap between li */ 
 }
 
 
@@ -45,7 +44,7 @@ body {
 section {
     background-color: hsl(0, 0%, 12%);
     border-radius: 16px;
-    min-width: 20rem;
+    min-width: 20rem; /* latest change */ 
     padding: 10px;
 }
 
